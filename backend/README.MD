@@ -83,22 +83,6 @@ python manage.py runserver
     - post:actors
     - patch:actors
     - delete:actors
-
-  executive producer:
-    - get:actors
-    - get:movies
-    - get:actors/<id>
-    - get:movies/<id>
-    - get:actors-detail
-    - get:movies-detail
-    - get:actors/<id>/detail
-    - get:movies/<id>/detail
-    - post:actors
-    - patch:actors
-    - delete:actors
-    - post:movies
-    - patch:movies
-    - delete:movies
     
   ```
 
