@@ -119,4 +119,17 @@ python manage.py runserver
   * 404 - `not found`
   * 422 - `unprocessable`
 
+
+## API Testing
+
+* For this project I used <b>Postman</b> for testing
+
+1. There are two postman collections for testing:
+  * First (capstone.postman_collection.json) is for testing API that is running locally.
+  * Second (heroku.postman_collection.json) is for tesing API that is running on heroku.com
+
+2. Import collections.
+
+3. Run collections.
+
 # CastingAgency
