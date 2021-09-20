@@ -49,7 +49,7 @@ python manage.py runserver
 
  1. This API is using auht0 authentication system
 
- 3. There are 5 public endpoints:
+ 2. There are 5 public endpoints:
 
   ```
   GET '/'
@@ -60,7 +60,17 @@ python manage.py runserver
   ```
  So this endpoints can be reached by anyone and do not require authentication
 
- 2. Here are roles and permissions:
+ 3. Users and passwords:
+
+ -----------------------------------
+ | Casting Assistant | CAassistant5!|
+ -----------------------------------
+ | Casting Director  | CAdirector5! |
+ -----------------------------------
+ | Executive Producer| CAproducer5! |
+ -----------------------------------
+
+ 4. Here are roles and permissions:
 
   ```
   casting assistant:
@@ -83,7 +93,23 @@ python manage.py runserver
     - post:actors
     - patch:actors
     - delete:actors
-    
+
+  executive producer:
+    - get:actors
+    - get:movies
+    - get:actors/<id>
+    - get:movies/<id>
+    - get:actors-detail
+    - get:movies-detail
+    - get:actors/<id>/detail
+    - get:movies/<id>/detail
+    - post:actors
+    - patch:actors
+    - delete:actors
+    - post:movies
+    - patch:movies
+    -delete:movies
+
   ```
 
 
