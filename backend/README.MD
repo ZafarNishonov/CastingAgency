@@ -135,7 +135,7 @@ python manage.py runserver
 
 # API Documentation
 
-### GET `/`
+## GET `/`
 
 1. This endpoint is public.
 
@@ -156,7 +156,7 @@ Finally! I have done it! Casting Agency API is working
 5. There are no errors for this endpoint.
 
 
-### GET `actors`
+## GET `actors`
 
 1. This endpoint is public.
 
