@@ -45,7 +45,7 @@ python manage.py runserver
 ```
 
 
-### Authentication
+## Authentication
 
 #### The login page is <a href="https://fsnd-udacity-project.us.auth0.com/authorize?audience=casting_agency&response_type=token&client_id=9pgVHkMpuL7DrsSjhpOn1swtgYtqDCWw&redirect_uri=http://127.0.0.1:8100/login-results">here </a> 
 
