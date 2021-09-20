@@ -252,4 +252,58 @@ GET `http://127.0.0.1:5000/movies/<id>`
 ```
 
 5. There are no errorhandlers for this endpoint.
+
+
+## GET `actors-detail`
+
+
+1. This endpoint is not public.
+
+2. Permission is required:
+
+  * `get:actors-detail`
+
+3. Request:
+
+```postman
+GET `http://127.0.0.1:5000/actors-detail`
+```
+
+4. Response:
+
+```
+{
+    "actors_detail": [],
+    "success": true
+}
+```
+
+5. There is 401 errorhandler for this endpoint.
+
+
+## GET `movies-detail`
+
+
+1. This endpoint is not public.
+
+2. Permission is required:
+
+  * `get:movies-detail`
+
+3. Request:
+
+```postman
+GET `http://127.0.0.1:5000/movies-detail`
+```
+
+4. Response:
+
+```
+{
+    "movies_detail": [],
+    "success": true
+}
+```
+
+5. There is 401 errorhandler for this endpoint.
 # CastingAgency

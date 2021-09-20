@@ -71,10 +71,6 @@ def create_app(test_config=None):
     @requires_auth('get:actors/<id>/detail')
     def actor_detail(payload, id):
         query_actor = Actors.query.filter_by(Actors.id == id).one_or_none()
-
-        if query_actor is None:
-            abort(404)
-
         actor = [actor.long() for actor in query_actor]
         return jsonify({
             'success': True,
@@ -163,7 +159,6 @@ def create_app(test_config=None):
 
 
     @app.route('/movies', methods=['GET'])
-#    @requires_auth('get:movies')
     def show_movies():
         query_movies = Movies.query.all()
 
@@ -178,7 +173,6 @@ def create_app(test_config=None):
 
 
     @app.route('/movies/<int:id>', methods=['GET'])
-#    @requires_auth('get:movies/<id>')
     def show_movie():
         query_movie = Movies.query.filter_by(Movies.id == id).one_or_none()
         movie = [movie.short() for movie in query_movie]
@@ -207,10 +201,6 @@ def create_app(test_config=None):
     @requires_auth('get:movies/<id>/detail')
     def movie_detail(payload, id):
         query_movie = Movies.query.filter_by(Movies.id == id).one_or_none()
-
-        if query_movie is None:
-            abort(404)
-
         movie = [movie.long() for movie in query_movie]
         return jsonify({
             'success': True,
