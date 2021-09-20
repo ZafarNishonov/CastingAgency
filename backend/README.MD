@@ -111,5 +111,9 @@ python manage.py runserver
 
  * The logout page is <a href="https://fsnd-udacity-project.us.auth0.com/logout">here</a>
 
+## Errors
 
+ * There are 3 errorhandlers:
+
+   404 -
 # CastingAgency
