@@ -63,9 +63,9 @@ python manage.py runserver
  So this endpoints can be reached by anyone and do not require authentication
 
  3. Users and passwords:
-      * Casting Assistant   - `CAassistant5!`
-      * Casting Director    - `CAdirector5!` 
-      * Executive Producer  - `CAproducer5!` 
+      * Casting Assistant   - assistant@capstone.com `CAassistant5!`
+      * Casting Director    - director@capstone.com  `CAdirector5!` 
+      * Executive Producer  - producer@capstone.com  `CAproducer5!` 
 
  4. Here are roles and permissions:
 
@@ -222,7 +222,7 @@ GET `http://127.0.0.1:5000/actors/<id>`
 ```
 {
   "success": True,
-  "actor": actor
+  "actor": []
 }
 ```
 
@@ -247,7 +247,7 @@ GET `http://127.0.0.1:5000/movies/<id>`
 ```
 {
   "success": True,
-  "movie": movie
+  "movie": []
 }
 ```
 
@@ -306,4 +306,259 @@ GET `http://127.0.0.1:5000/movies-detail`
 ```
 
 5. There is 401 errorhandler for this endpoint.
+
+
+## GET `actors-detail`
+
+
+1. This endpoint is not public.
+
+2. Permission is required:
+
+  * `get:actors/<id>/detail`
+
+3. Request:
+
+```postman
+GET `http://127.0.0.1:5000/actors/<id>/detail`
+```
+
+4. Response:
+
+```
+{
+    "actor_detail": [],
+    "success": true
+}
+```
+
+5. There is 401 errorhandler for this endpoint.
+
+
+## GET `movies/<id>/detail`
+
+
+1. This endpoint is not public.
+
+2. Permission is required:
+
+  * `get:movies/<id>/detail`
+
+3. Request:
+
+```postman
+GET `http://127.0.0.1:5000/movies/<id>/detail`
+```
+
+4. Response:
+
+```
+{
+    "movie_detail": [],
+    "success": true
+}
+```
+
+5. There is 401 errorhandler for this endpoint.
+
+
+## POST `actors`
+
+
+1. This endpoint is not public.
+
+2. Permission is required:
+
+  * `post:actors`
+
+3. Request:
+
+```postman
+POST `http://127.0.0.1:5000/actors`
+
+json ({
+  'name': <name>,
+  'age': <age>,
+  'gender': <gender>,
+  'birth_day': <birth_day>,
+  'birth_place': <birth_place>
+  })
+
+```
+
+4. Response:
+
+```
+{
+  'success': True,
+  'new_actor': []
+}
+```
+
+5. There is 401 errorhandler for this endpoint.
+
+
+## POST `movies`
+
+
+1. This endpoint is not public.
+
+2. Permission is required:
+
+  * `post:movies`
+
+3. Request:
+
+```postman
+POST `http://127.0.0.1:5000/movies`
+
+json ({
+  'title': <title>,
+  'release_date': <release_date>,
+  'budget': <budget>,
+  'producer': <producer>,
+  })
+
+```
+
+4. Response:
+
+```
+{
+  'success': True,
+  'new_movie': []
+}
+```
+
+5. There is 401 errorhandler for this endpoint.
+
+
+## PATCH `actors/<id>`
+
+
+1. This endpoint is not public.
+
+2. Permission is required:
+
+  * `patch:actors`
+
+3. Request:
+
+```postman
+PATCH `http://127.0.0.1:5000/actors/<id>`
+
+json ({
+  'name': <name>,
+  'age': <age>,
+  'gender': <gender>,
+  'birth_day': <birth_day>,
+  'birth_place': <birth_place>
+  })
+
+```
+
+4. Response:
+
+```
+{
+  'success': True,
+  'edited_actor': []
+}
+```
+
+5. There is 401 errorhandler for this endpoint.
+
+
+## PATCH `movies/<id>`
+
+
+1. This endpoint is not public.
+
+2. Permission is required:
+
+  * `patch:movies`
+
+3. Request:
+
+```postman
+PATCH `http://127.0.0.1:5000/movies/<id>`
+
+json ({
+  'title': <title>,
+  'release_date': <release_date>,
+  'budget': <budget>,
+  'producer': <producer>,
+  })
+
+```
+
+4. Response:
+
+```
+{
+  'success': True,
+  'edited_movie': []
+}
+```
+
+5. There is 401 errorhandler for this endpoint.
+
+
+
+## DELETE `actors/<id>`
+
+1. This endpoint is not public.
+
+2. Permission is required:
+
+  * `delete:actors`
+
+3. Request:
+
+```postman
+DELETE `http://127.0.0.1:5000/actors/<id>`
+```
+
+4. Response:
+
+```
+{
+  'success': True,
+  'deleted_actor': []
+}
+```
+
+5. There is 401 errorhandler for this endpoint.
+
+
+## DELETE `movies/<id>`
+
+1. This endpoint is not public.
+
+2. Permission is required:
+
+  * `delete:movies`
+
+3. Request:
+
+```postman
+DELETE `http://127.0.0.1:5000/movies/<id>`
+```
+
+4. Response:
+
+```
+{
+  'success': True,
+  'deleted_movie': []
+}
+```
+
+5. There is 401 errorhandler for this endpoint.
+
+
+# Author:
+
+  ©Zafar Nishonov 
+
 # CastingAgency
