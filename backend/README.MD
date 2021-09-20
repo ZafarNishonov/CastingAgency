@@ -61,14 +61,9 @@ python manage.py runserver
  So this endpoints can be reached by anyone and do not require authentication
 
  3. Users and passwords:
-
-  __________________________________
  | Casting Assistant | CAassistant5!|
-  __________________________________
  | Casting Director  | CAdirector5! |
-  __________________________________
  | Executive Producer| CAproducer5! |
-  __________________________________
 
  4. Here are roles and permissions:
 
