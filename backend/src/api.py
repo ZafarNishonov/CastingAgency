@@ -20,7 +20,7 @@ def create_app(test_config=None):
 
     @app.route('/', methods=['GET'])
     def index():
-        return jsonify({"Finally! I have done it! Casting Agency API is working"})
+        return "Finally! I have done it! Casting Agency API is working"
 
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
