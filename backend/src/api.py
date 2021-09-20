@@ -90,7 +90,7 @@ def create_app(test_config=None):
             age = body.get('age')
             gender = body.get('gender')
             birth_day = body.get('birth_day')
-            birth_place = body,get('birth_place')
+            birth_place = body.get('birth_place')
 
             new_actor = Actors(name=name, age=age, gender=gender, birth_day=birth_day, birth_place=birth_place)
 
