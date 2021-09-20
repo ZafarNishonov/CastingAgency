@@ -115,8 +115,8 @@ python manage.py runserver
 
  * There are 3 errorhandlers:
    
-   401 - AuhtError `unauthorized`
-   404 - `not found`
-   422 - `unprocessable`
+  * 401 - AuhtError `unauthorized`
+  * 404 - `not found`
+  * 422 - `unprocessable`
 
 # CastingAgency
