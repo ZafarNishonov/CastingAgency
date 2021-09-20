@@ -132,4 +132,40 @@ python manage.py runserver
 
 3. Run collections.
 
+
+# API Documentation
+
+### GET `/`
+
+1. This endpoint is public.
+
+2. Permission is not required.
+
+3. Request:
+
+```postman
+GET `http://127.0.0.1:5000`
+```
+
+4. Response:
+
+```
+Finally! I have done it! Casting Agency API is working
+```
+
+5. There are no errors for this endpoint.
+
+
+### GET `actors`
+
+1. This endpoint is public.
+
+2. Permission is not required.
+
+3. Request:
+
+```postman
+
+```
+
 # CastingAgency
