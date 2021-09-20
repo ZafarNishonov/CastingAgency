@@ -63,7 +63,7 @@ python manage.py runserver
  3. Users and passwords:
       - Casting Assistant   - CAassistant5!
       - Casting Director    - CAdirector5! 
-      - Executive Producer - CAproducer5! 
+      - Executive Producer  - CAproducer5! 
 
  4. Here are roles and permissions:
 
