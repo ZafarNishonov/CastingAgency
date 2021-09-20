@@ -165,7 +165,91 @@ Finally! I have done it! Casting Agency API is working
 3. Request:
 
 ```postman
-
+GET `http://127.0.0.1:5000/actors`
 ```
 
+4. Response:
+
+```
+{
+  "actors":[],
+  "success":true
+}
+```
+
+5. There is 404 errorhandler for this endpoint.
+
+
+## GET `movies`
+
+1. This endpoint is public.
+
+2. Permission is not required.
+
+3. Request:
+
+```postman
+GET `http://127.0.0.1:5000/movies`
+```
+
+4. Response:
+
+```
+{
+  "movies":[],
+  "success":true
+}
+```
+
+5. There is 404 errorhandler for this endpoint.
+
+
+## GET `actors/<id>`
+
+
+1. This endpoint is public.
+
+2. Permission is not required.
+
+3. Request:
+
+```postman
+GET `http://127.0.0.1:5000/actors/<id>`
+```
+
+4. Response:
+
+```
+{
+  "success": True,
+  "actor": actor
+}
+```
+
+5. There are no errorhandlers for this endpoint.
+
+
+## GET `movies/<id>`
+
+
+1. This endpoint is public.
+
+2. Permission is not required.
+
+3. Request:
+
+```postman
+GET `http://127.0.0.1:5000/movies/<id>`
+```
+
+4. Response:
+
+```
+{
+  "success": True,
+  "movie": movie
+}
+```
+
+5. There are no errorhandlers for this endpoint.
 # CastingAgency

@@ -181,10 +181,6 @@ def create_app(test_config=None):
 #    @requires_auth('get:movies/<id>')
     def show_movie():
         query_movie = Movies.query.filter_by(Movies.id == id).one_or_none()
-
-        if query_movie is None:
-            abort(404)
-
         movie = [movie.short() for movie in query_movie]
         return jsonify({
             'success': True,
