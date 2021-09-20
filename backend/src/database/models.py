@@ -24,11 +24,11 @@ association_table = db.Table('casting_agency',
 class Actors(db.Model):  
   __tablename__ = 'actors'
   id = db.Column(db.Integer, primary_key=True)
-  name = db.Column(db.String())
-  age = db.Column(db.Integer)
-  gender = db.Column(db.String(10))
-  birth_day = db.Column(db.String(50))
-  birth_place = db.Column(db.String(50))
+  name = db.Column(db.String(), nullable=False)
+  age = db.Column(db.Integer, nullable=False)
+  gender = db.Column(db.String(10), nullable=False)
+  birth_day = db.Column(db.String(50), nullable=False)
+  birth_place = db.Column(db.String(50), nullable=False)
 
   def __init__(self, name, age, gender):
     self.name = name
