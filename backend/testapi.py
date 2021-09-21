@@ -127,5 +127,40 @@ class CastingAgencyTestCase(unittest.TestCase):
         self.assertEqual(res.status_code, 401)
         self.assertEqual(data['success'], False)
 
+    def test_delete_actor_success(self):
+        res =self.client().delete('/actors/1', json={},
+            headers={'Authorization': f'Bearer {director}'})
+
+        data = json.loads(res.data)
+        self.assertEqual(res.status_code, 200)
+        self.assertEqual(data['success'], True)
+
+
+    def test_delete_actor_fail(self):
+        res =self.client().delete('/actors/1', json={},
+            headers={'Authorization': f'Bearer {assistant}'})
+
+        data = json.loads(res.data)
+        self.assertEqual(res.status_code, 401)
+        self.assertEqual(data['success'], False)
+
+
+    def test_delete_movie_success(self):
+        res =self.client().get('/movies/1', json={},
+            headers={'Authorization': f'Bearer {producer}'})
+
+        data = json.loads(res.data)
+        self.assertEqual(res.status_code, 200)
+        self.assertEqual(data['success'], True)
+
+
+    def test_delete_movie_fail(self):
+        res =self.client().get('/movies/1', json={},
+            headers={'Authorization': f'Bearer {director}'})
+
+        data = json.loads(res.data)
+        self.assertEqual(res.status_code, 401)
+        self.assertEqual(data['success'], False)
+
 
     
