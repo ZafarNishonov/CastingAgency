@@ -7,7 +7,7 @@ from flask_sqlalchemy import SQLAlchemy
 from src.api import create_app
 from src.database.models import setup_db, Movies, Actors
 
-database_path = os.getenv("DATABASE_URI")
+database_path = "postgresql://postgres:1029384756@localhost:5432/capstone_test"
 assistant = os.getenv("ASSISTANT")
 director = os.getenv("DIRECTOR")
 producer = os.getenv("PRODUCER")
@@ -15,14 +15,14 @@ producer = os.getenv("PRODUCER")
 
 class CastingAgencyTestCase(unittest.TestCase):
 
-	def setup(self):
+    def setup(self):
         self.app = create_app()
         self.client = self.app.test_client
         self.database_path = database_path
         self.db = setup_db(self.app, self.database_path)
         self.db.drop_all()
-        self.db.create_all()	
-
+        self.db.create_all()
+    
         with self.app.app_context():
             self.db = SQLAlchemy()
             self.db.init_app(self.app)
@@ -161,6 +161,11 @@ class CastingAgencyTestCase(unittest.TestCase):
         data = json.loads(res.data)
         self.assertEqual(res.status_code, 401)
         self.assertEqual(data['success'], False)
+
+
+
+if __name__ == "__main__":
+    unittest.main()
 
 
     
